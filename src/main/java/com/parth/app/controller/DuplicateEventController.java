@@ -37,7 +37,7 @@ public class DuplicateEventController {
 
 
 	@GetMapping("/get_top_duplicates/{source}/{n}")
-	public List<EventDTOs.SourceEventModel> getTopNDuplicates(@PathVariable  Integer n) {
+	public List<EventDTOs.SourceEvent> getTopNDuplicates(@PathVariable  Integer n) {
 		System.out.println("fetching top urls");
 		return services.getTop10DuplicatEvents(n, eventsMap);
 	}
